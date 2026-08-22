@@ -1,13 +1,9 @@
 package com.shopping.mall.repository;
 
-import java.util.List;
-import java.util.Optional;
+import com.shopping.mall.entity.Wishlist;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface WishlistRepository {
-    Wishlist save(Wishlist entity);
-    Optional<Wishlist> findById(String id);
-    List<Wishlist> findAll();
-    void deleteById(String id);
-    boolean existsById(String id);
-    long count();
+@Repository
+public interface WishlistRepository extends JpaRepository<Wishlist, String> {
 }

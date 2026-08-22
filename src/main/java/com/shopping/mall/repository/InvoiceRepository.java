@@ -1,13 +1,9 @@
 package com.shopping.mall.repository;
 
-import java.util.List;
-import java.util.Optional;
+import com.shopping.mall.entity.Invoice;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface InvoiceRepository {
-    Invoice save(Invoice entity);
-    Optional<Invoice> findById(String id);
-    List<Invoice> findAll();
-    void deleteById(String id);
-    boolean existsById(String id);
-    long count();
+@Repository
+public interface InvoiceRepository extends JpaRepository<Invoice, String> {
 }

@@ -1,13 +1,9 @@
 package com.shopping.mall.repository;
 
-import java.util.List;
-import java.util.Optional;
+import com.shopping.mall.entity.Rating;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface RatingRepository {
-    Rating save(Rating entity);
-    Optional<Rating> findById(String id);
-    List<Rating> findAll();
-    void deleteById(String id);
-    boolean existsById(String id);
-    long count();
+@Repository
+public interface RatingRepository extends JpaRepository<Rating, String> {
 }

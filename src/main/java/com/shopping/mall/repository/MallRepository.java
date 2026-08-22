@@ -1,13 +1,9 @@
 package com.shopping.mall.repository;
 
-import java.util.List;
-import java.util.Optional;
+import com.shopping.mall.entity.Mall;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface MallRepository {
-    Mall save(Mall entity);
-    Optional<Mall> findById(String id);
-    List<Mall> findAll();
-    void deleteById(String id);
-    boolean existsById(String id);
-    long count();
+@Repository
+public interface MallRepository extends JpaRepository<Mall, String> {
 }

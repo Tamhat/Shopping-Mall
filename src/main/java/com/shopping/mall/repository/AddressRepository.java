@@ -1,13 +1,9 @@
 package com.shopping.mall.repository;
 
-import java.util.List;
-import java.util.Optional;
+import com.shopping.mall.entity.Address;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface AddressRepository {
-    Address save(Address entity);
-    Optional<Address> findById(String id);
-    List<Address> findAll();
-    void deleteById(String id);
-    boolean existsById(String id);
-    long count();
+@Repository
+public interface AddressRepository extends JpaRepository<Address, String> {
 }

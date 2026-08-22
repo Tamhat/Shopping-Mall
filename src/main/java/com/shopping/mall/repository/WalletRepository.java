@@ -1,13 +1,9 @@
 package com.shopping.mall.repository;
 
-import java.util.List;
-import java.util.Optional;
+import com.shopping.mall.entity.Wallet;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface WalletRepository {
-    Wallet save(Wallet entity);
-    Optional<Wallet> findById(String id);
-    List<Wallet> findAll();
-    void deleteById(String id);
-    boolean existsById(String id);
-    long count();
+@Repository
+public interface WalletRepository extends JpaRepository<Wallet, String> {
 }

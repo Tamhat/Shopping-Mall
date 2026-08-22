@@ -1,13 +1,9 @@
 package com.shopping.mall.repository;
 
-import java.util.List;
-import java.util.Optional;
+import com.shopping.mall.entity.Delivery;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface DeliveryRepository {
-    Delivery save(Delivery entity);
-    Optional<Delivery> findById(String id);
-    List<Delivery> findAll();
-    void deleteById(String id);
-    boolean existsById(String id);
-    long count();
+@Repository
+public interface DeliveryRepository extends JpaRepository<Delivery, String> {
 }

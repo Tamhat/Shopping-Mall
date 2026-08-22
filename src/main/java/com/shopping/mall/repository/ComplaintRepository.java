@@ -1,13 +1,9 @@
 package com.shopping.mall.repository;
 
-import java.util.List;
-import java.util.Optional;
+import com.shopping.mall.entity.Complaint;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ComplaintRepository {
-    Complaint save(Complaint entity);
-    Optional<Complaint> findById(String id);
-    List<Complaint> findAll();
-    void deleteById(String id);
-    boolean existsById(String id);
-    long count();
+@Repository
+public interface ComplaintRepository extends JpaRepository<Complaint, String> {
 }
