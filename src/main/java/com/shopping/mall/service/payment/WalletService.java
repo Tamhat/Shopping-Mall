@@ -1,4 +1,4 @@
-package com.shopping.mall.service;
+package com.shopping.mall.service.payment;
 
 public class WalletService {
 
